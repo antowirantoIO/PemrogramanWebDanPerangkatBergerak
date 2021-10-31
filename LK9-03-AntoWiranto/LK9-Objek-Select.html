@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Dengan Objek Select</title>
+</head>
+<body>
+    <script>
+        function tekan(){
+            var jurusanstr = document.fform.jurusan.value
+            document.fform.ojurusan.value = jurusanstr
+        }
+    </script>
+
+    <form name="fform">
+        <h1>penggunaan Objek Select</h1><br>
+        <h3>Masukan :</h3>
+
+        Jurusan Di SMKN 1 CIAMIS :
+        <select name="jurusan" size="1">
+            <option value="Rekayasa perangkat Lunak">Rekayasa perangkat Lunak</option>
+            <option value="MultiMedia">MultiMedia</option>
+            <option value="OTKP">OTKP</option>
+            <option value="Bisnis daring dan Pemasaran">Bisnis daring dan Pemasaran</option>
+            <option value="Tata Boga">Tata Boga</option>
+            <option value="Perhotelan">Perhotelan</option>
+            <option value="Akuntasi dan Keuangan lembaga">Akuntasi dan Keuangan lembaga</option>
+        </select>
+        <p>
+            <input type="button" value="kirim" onclick="tekan()">
+            <input type="reset" value="Ulang">
+            <h3>Output Jurusan</h3>
+            <input type="text" name="ojurusan" size="30">
+    </form>
+</body>
+</html>

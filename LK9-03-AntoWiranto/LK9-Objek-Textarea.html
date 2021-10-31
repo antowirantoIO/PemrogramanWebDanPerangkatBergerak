@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>latihan Dengan Objek textarea</title>
+</head>
+<body>
+    <script>
+        function tekan(){
+            var ketstr = document.fform.ket.value
+            document.fform.oket.value = ketstr
+        }
+    </script>
+
+    <form name="fform">
+        <h1>Memasukan Data Dengan Objek Textarea</h1>
+        <h3>Keterangan :</h3><br>
+        <textarea name="ket" cols="30" rows="3"></textarea>
+        <br><br>
+        <input type="button" value="kirim" onclick="tekan()">
+        <input type="reset" value="Ulang">
+        <h3>output Keterangan :</h3>
+        <textarea name="oket" cols="30" rows="3"></textarea>
+    </form>
+</body>
+</html>

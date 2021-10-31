@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masukan Bilangan</title>
+</head>
+<body>
+    <p>
+        <script>
+            function jumlah() {
+                var bil1 = parseFloat(document.fform.bilangan1.value);
+                if(isNaN(bil1))
+                    bil1 = 0.0;
+
+                var bil2 = parseFloat(document.fform.bilangan2.value);
+                if(isNaN(bil2))
+                    bil2 = 0.0;
+
+                var hasilPenjumlahan = bil1 + bil2;
+                var hasilPengurangan = bil1 - bil2;
+                var hasilPengkalian = bil1 * bil2;
+                var hasilPembagian = bil1 + bil2;
+
+                alert(`Hasil Penjumlahan = ${hasilPenjumlahan} \n 
+                       Hasil Pengurangan = ${hasilPengurangan} \n 
+                       Hasil Pengalian = ${hasilPengkalian} \n 
+                       Hasil Pembagian = ${hasilPembagian}`);
+            }
+        </script>
+
+        <form name="fform">
+            <h1><br>Masukan data Lewat Keyboard</h1>
+            <pre>
+                Bilangan pertama    : <input type="text" name="bilangan1" size="11">
+                Bilangan kedua    : <input type="text" name="bilangan2" size="11">
+            </pre>
+            <input type="button" value="Jumlahkan" onclick="jumlah()">
+            <input type="reset" value="Ulang">
+
+        </form>
+    </p>
+</body>
+</html>

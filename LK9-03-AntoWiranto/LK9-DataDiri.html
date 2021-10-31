@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Diri</title>
+</head>
+<body bgcolor="#79B2EC">
+    <script>
+        function process(){
+            var nis = document.dataform.nis.value
+            var nama = document.dataform.nama.value
+            var jenisKelamin = document.dataform.jenis_kelamin.value
+            var agama = document.dataform.agama.value
+            var status = document.dataform.status.value
+            var jurusan = document.dataform.jurusan.value
+            var komentar = document.dataform.komentar.value
+            
+            document.outputform.outNis.value = nis
+            document.outputform.outNama.value = nama
+            document.outputform.outJenisKelamin.value = jenisKelamin
+            document.outputform.outAgama.value = agama
+            document.outputform.outStatus.value = status
+            document.outputform.outJurusan.value = jurusan
+            document.outputform.outKomentar.value = komentar
+        }
+    </script>
+    <h1 align="center">Data Diri Peserta Didik Kelas XI RPL</h1>
+    <hr>
+    <pre>
+        <form name="dataform">
+            NIS             : <input type="text" name="nis" size="9"><br>
+            Nama            : <input type="text" name="nama" size="50"><br>
+            Jenis Kelamin   : <select name="jenis_kelamin">
+                                <option value="Perempuan">Perempuan</option>
+                                <option value="Laki Laki">Laki Laki</option>
+                            </select><br>
+            Agama           : <select name="agama">
+                                <option value="Islam">Islam</option>
+                                <option value="Kristen">Kristen</option>
+                                <option value="Protestan">Protestan</option>
+                                <option value="Hindu">Hindu</option>
+                                <option value="Budha">Budha</option>
+                                <option value="Khonghucu">Khonghucu</option>
+                            </select><br>
+            Status          : <input type="radio" name="status" value="Punya Pasangan">Punya Pasangan
+                              <input type="radio" name="status" value="Jomblo">Jomblo<br>
+            Jurusan         : <select name="jurusan" size="1">
+                                <option value="Rekayasa perangkat Lunak">Rekayasa perangkat Lunak</option>
+                                <option value="MultiMedia">MultiMedia</option>
+                                <option value="OTKP">OTKP</option>
+                                <option value="Bisnis daring dan Pemasaran">Bisnis daring dan Pemasaran</option>
+                                <option value="Tata Boga">Tata Boga</option>
+                                <option value="Perhotelan">Perhotelan</option>
+                                <option value="Akuntasi dan Keuangan lembaga">Akuntasi dan Keuangan lembaga</option>
+                            </select><br>
+            Komentar        : <textarea name="komentar"  cols="30" rows="5" name="komentar"></textarea><br>
+            <input type="button" value="Kirim" onClick="process()"> <input type="reset" value="Ulang">
+        </form>
+    </pre>
+    <h1 align="center">Hasil Data Diri Yang Di Inputkan</h1><hr>
+    <pre>
+        <form name="outputform">
+            NIS             : <input type="text" name="outNis" size="9"><br>
+            Nama            : <input type="text" name="outNama" size="50"><br>
+            Jenis Kelamin   : <input type="text" name="outJenisKelamin" size="30"><br>
+            Agama           : <input type="text" name="outAgama" size="20"><br>
+            Status          : <input type="text" name="outStatus" size="30"><br>
+            Jurusan         : <input type="text" name="outJurusan" size="50"><br>
+            Komentar        : <textarea name="outKomentar" cols="30" rows="5" name="komentar"></textarea><br>
+            <input type="reset" value="Delete">
+        </form>
+    </pre>
+</body>
+</html>
